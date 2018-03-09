@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 import { TabsPage } from '../tabs/tabs';
 /**
@@ -16,16 +16,26 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild('usr') usr;
+  @ViewChild('pwd') pwd;
 
-  }
-
-  ionViewDidLoad() {
-    
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public alertCtrl: AlertController) {
   }
 
   logIn() {
-    this.navCtrl.setRoot(TabsPage);
+    if (this.usr.value == 'usuario' && this.pwd.value == '12345') {
+        this.navCtrl.setRoot(TabsPage);
+    } else {
+      let alert = this.alertCtrl.create({
+        title: 'Error de autenticación!',
+        subTitle: 'Usuario o Constraseña inválidos.',
+        buttons: ['OK']
+      });
+      
+      alert.present();
+    }
+
   }
 
 }
