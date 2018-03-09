@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
@@ -13,12 +13,12 @@ export class TabsPage {
 
   tab1Root = HomePage;
   tab2Root = AboutPage;
-  //tab3Root = ContactPage;
+  tab3Root = LoginPage;
 
   constructor(public navCtrl: NavController) {
   }
 
   logOut() {
-    this.navCtrl.getRootNav().setRoot(LoginPage);
+    this.navCtrl.setRoot(LoginPage);
   }
 }
