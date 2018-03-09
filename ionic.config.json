@@ -1,0 +1,8 @@
+{
+  "name": "eComFace",
+  "app_id": "5e436805",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
