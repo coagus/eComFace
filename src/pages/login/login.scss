@@ -3,9 +3,15 @@ page-login {
       width: 50%;
       height: auto;
       margin: 0 auto;
-    }
+      max-width: 300px;
+  }
+
   ion-row {
-          align-items: center;
-          text-align: center;
-        }
+    align-items: center;
+    text-align: center;
+  }
+
+  ion-button {
+    width: 50%;
+  }
 }

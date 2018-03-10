@@ -24,7 +24,17 @@
       <ion-input #pwd type="password"></ion-input>
     </ion-item>
 
+    <ion-item>
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-right large (click)="logIn()">
+            Ingresar
+            <ion-icon ios="ios-log-in" md="md-log-in"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
   </ion-list>
 
-  <button ion-button full (click)="logIn()">Ingresar</button>
 </ion-content>
